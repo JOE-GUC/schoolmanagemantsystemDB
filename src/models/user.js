@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const bcrypt = require('bcrypt'); // Import bcrypt for password hashing
+const bcrypt = require('bcryptjs'); // Import bcrypt for password hashing
 const crypto = require('crypto'); // Import crypto for generating the reset token
 
 const userSchema = new Schema({
