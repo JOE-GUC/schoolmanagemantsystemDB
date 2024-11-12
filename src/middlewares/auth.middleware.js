@@ -35,7 +35,7 @@ const verifyRegisterBody = async (req, res, next) => {
     const body = req.body;
     if (
         !body.first_name || !body.last_name ||
-        !body.email || !body.username ||
+        !body.email ||
         !body.password  || !body.password_confirm
     ) {
         return res.status(400).json({
