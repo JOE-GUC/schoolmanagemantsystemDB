@@ -54,12 +54,14 @@ userSchema.methods.hashPassword = async function(password) {
 
 // Instance method to generate password reset token and expiration
 userSchema.methods.generatePasswordReset = function() {
+
     this.resetPasswordToken = crypto.randomBytes(20).toString('hex'); // Token of 20 bytes
     this.resetPasswordExpires = Date.now() + 3600000; // Token expires in 1 hour
 };
 
 // Compare password method
 userSchema.methods.comparePassword = async function(password) {
+
     return await bcrypt.compare(password, this.password);
 };
 
