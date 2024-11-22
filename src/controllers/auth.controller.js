@@ -1,5 +1,5 @@
 const authService = require('../services/auth.service');
-const User = require('../models/User');
+const User = require('../models/user');
 // const sendEmail = require('../utils/sendEmail'); // Add this to send emails
 const crypto = require('crypto'); 
 
